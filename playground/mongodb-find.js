@@ -18,7 +18,7 @@ MongoClient.connect('mongodb://localhost:27017/TodoApp', (err, client)=>{
         console.log('error - content not updated', err);
     }); */
 
-    db.collection('Todos').find({
+   /*  db.collection('Todos').find({
         _id: new ObjectID('5ae0aa6dc24ca756f8230689')
     }).toArray().then((docs)=>{
         console.log('Todos');
@@ -27,6 +27,10 @@ MongoClient.connect('mongodb://localhost:27017/TodoApp', (err, client)=>{
     .catch(err =>{
 
         console.log('error - content not updated', err);
+    }); */
+
+    db.collection('Users').find({name: 'Cosmo'}).toArray().then((docs)=>{
+        console.log(JSON.stringify(docs, undefined, 2));
     });
 
    
