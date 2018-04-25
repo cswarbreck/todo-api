@@ -1,5 +1,6 @@
 //const MongoClient = require('mongodb').MongoClient;
 const {MongoClient, ObjectID} = require('mongodb');
+//We use this to select a particular value, in this case, ObjectedID, which is called later on.
 
 MongoClient.connect('mongodb://localhost:27017/TodoApp', (err, client)=>{
     if (err) {
